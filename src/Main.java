@@ -2,14 +2,20 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Product oreo = new Product(12444, "Oreo", 260, "food");
+        Product milk = new Product(12448, "Milk", 160, "food");
+        Product apple = new Product(12449, "apple", 220, "food");
+        Product bread = new Product(12608, "bread", 160, "food");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Product[] basket1 = {oreo, milk};
+        Order order1 = new Order("Анна", basket1);
+
+        Product[] basket2 = {oreo, milk};
+        Order order2 = new Order("Таня", basket1);
+        System.out.println();
+
+        System.out.println("order1: " + order1);
+        System.out.println(order1.equals(order2));
+
     }
 }
